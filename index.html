@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
     <script src="./scripts/index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>DriveBuddy</title>
   </head>
   <body>
@@ -16,19 +23,26 @@
         </a>
       </div>
       <nav>
-        <ul>
+        <ul id="menu">
           <li><a href="#solution">Problem & solution </a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="toggleButton">
+          <i class="fa-solid fa-bars" id="toggleButtonIcon"></i>
+          <span class="visually-hidden">Toggle Menu</span>
+        </button>
       </nav>
     </header>
     <main>
       <section id="hero"><h2>Hero Section</h2></section>
       <section id="solution"><h2>Problem & Solution Section</h2></section>
       <section id="features"><h2>Features Section</h2></section>
-      <section id="team"><h2>Team Section</h2></section>
+      <section id="team">
+        <h2>Team Section</h2>
+        <div id="teamGrid"></div>
+      </section>
       <section id="contact"><h2>Contact Section</h2></section>
     </main>
     <footer>DriveBuddy &copy; <span id="currentYear"></span></footer>
