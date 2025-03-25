@@ -1,24 +1,68 @@
 * {
   box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --Color-palette-ocean-blue: #1E3A8A;
+
+}
 html,
 body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 31px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h4 {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
 }
 
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  font-family: "Figtree", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   overflow-x: hidden;
 }
+
 /* General styles*/
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -28,6 +72,7 @@ img {
   white-space: nowrap;
   width: 1px;
 }
+
 /*Header*/
 header {
   display: flex;
@@ -40,42 +85,171 @@ header {
   padding: 1rem;
   background-color: whitesmoke;
   border-bottom: 1px solid rgb(228, 228, 228);
+  z-index: 1000;
 }
+
 header #logo {
   width: 100%;
   object-fit: "contain";
 }
+
 header nav {
   display: flex;
   gap: 0.5rem;
+  z-index: 100;
 }
 
 header nav #menu {
   display: none;
   transition: all 0.2s ease-in-out;
   list-style: none;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
+
 header nav #toggleButton {
   display: block;
+  background-color: transparent;
+  border: transparent;
 }
+
+
+
 /*Main section*/
+
+main {
+  padding: 5rem 0;
+}
 section {
-  min-height: 100vh;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
   justify-content: center;
   border-bottom: 1px solid lightgray;
+  padding: 2rem;
+}
+/*Hero*/
+
+
+#hero {
+  padding: 2rem;
+
+
+}
+
+.hero-title {
+  color: var(--Neutral-4, #333);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.hero-text {
+  color: var(--Neutral-4, #333);
+  font-family: Figtree;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.proposal-button {
+  display: flex;
+  padding: 18px 24px;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+  gap: 12px;
+  border-radius: 60px;
+  border: transparent;
+  background: var(--Color-palette-ocean-blue);
+  box-shadow: 0px 3.6px 14.4px 0px rgba(30, 58, 138, 0.15), 0px 3.6px 7.2px 0px rgba(30, 58, 138, 0.15);
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+
+}
+.hero-content {
+  z-index: 100;
+  display: grid;
+  gap: 1rem;
+}
+.hero-img {
+  position: absolute;
+  z-index: 50;
+}
+
+/*Solution*/
+#solution {
+  display: grid;
+  gap: 1rem;
+}
+.solution-wrapper {
+  display: grid;
+  background-color: white;
+  gap: 20px;
+  padding: 24px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10), 0px 2px 16px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 12px;
+}
+
+.solution-image {
+  z-index: 1200;
 }
 /*Team*/
 .imageWrapper {
   width: 100%;
-  border-radius: 100%;
+  border-radius: 100% 100% 0 0;
   overflow: hidden;
   aspect-ratio: 1;
+  background-color: var(--Color-palette-ocean-blue);
+
+
 }
+
+/*Features*/
+#features {
+  background-color: var(--Color-palette-ocean-blue);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+.features-wrapper  {
+  background-color: white;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+}
+
+.features-wrapper-vertical {
+  background-color: white;
+  border-radius: 12px;
+  display: grid;
+  padding: 1rem;
+}
+
+.features-wrapper-vertical-admin {
+  display: grid;
+  padding: 1rem;
+  color: white;
+}
+
+.feature-card-wrapper {
+  display: grid;
+}
+
+.card-1, .card-2, .card-3, .card-4, .card-5, .card-6 {
+  grid-column: span 1;
+}
+
+.feature-card-wrapper img:first-of-type {
+  scale: 80%;
+}
+
 #teamGrid {
   display: grid;
   justify-content: center;
@@ -85,42 +259,107 @@ section {
   padding: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1rem;
+
 }
+
+.proposal-button:hover,
+.proposal-button:focus,
+.submit-button:hover {
+  box-shadow: 0px 3px 12px 0px rgba(0, 255, 255, 0.50), 0px 3px 6px 0px rgba(0, 255, 255, 0.50);
+}
+
 #teamGrid .gridItem {
   display: grid;
   gap: 0.5rem;
 }
+
 .memberName,
 .memberRole,
 .memberLinkedIn {
   display: block;
 }
+
+.memberName {
+  font-weight: 700;
+}
+
 /*Footer*/
 footer {
-  padding: 1rem;
+  padding: 3rem;
+  display: grid;
   text-align: center;
+  justify-content: center;
+  gap: 1rem;
 }
+
+/*Contact*/
+
+#contact {
+  display: grid;
+  gap: 23px;
+  background-color: rgba(30, 58, 138, 0.10);
+
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
+}
+
+.contact-form input {
+  display: flex;
+  padding: 12px;
+}
+
+.contact-form div {
+  display: grid;
+}
+
+.submit-button {
+  display: flex;
+  padding: 18px 32px;
+  width: fit-content;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 60px;
+  border: transparent;
+  background: var(--Color-palette-ocean-blue);
+  box-shadow: 0px 3.6px 14.4px 0px rgba(30, 58, 138, 0.15), 0px 3.6px 7.2px 0px rgba(30, 58, 138, 0.15);
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 /*Media Queries*/
 @media screen and (max-width: 599px) {
   header nav #menu {
-    max-width: 400px;
+    max-height: 30vh;
     width: 100%;
-    right: calc(-100%);
+    right: 0;
     bottom: 0;
-    top: 54px;
+    top: calc(54px - 100%);
     position: fixed;
     margin: 0;
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
+    padding: 10px 24px;
+    gap: 12px;
   }
+
   header nav #menu li a {
     display: block;
     width: 100%;
     padding: 0.5rem 1rem;
   }
+
   header nav #menu.show {
-    right: 0;
+    top: calc(54px);
+    z-index: 50;
   }
 }
 
@@ -128,7 +367,66 @@ footer {
   header nav #menu {
     display: flex;
   }
+
   header nav #toggleButton {
     display: none;
   }
+}
+
+@media only screen and (min-width: 430px) {
+  #teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+  #teamGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #features {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .card-1, .card-2 {
+    grid-column: span 3;
+    height: 100%;
+  }
+  .card-3, .card-4, .card-5 {
+    grid-column: span 2;
+    height: 100%;
+  }
+  .card-6 {
+    grid-column: -1 / 1;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #teamGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #features {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .card-1 {
+    grid-column: span 3;
+  }
+  .card-2 {
+    grid-column: span 2;
+  }
+  .card-3, .card-5 {
+    grid-column: span 2;
+  }
+  .card-4 {
+    grid-column: span 1;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hero-img {
+    display: none;
+  }
+  
+
 }
