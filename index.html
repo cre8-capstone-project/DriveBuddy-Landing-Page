@@ -1,185 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="fav.ico" type="image/x-icon" />
+    <script src="./scripts/index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>DriveBuddy</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/index.css" />
-  <script src="./scripts/index.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>DriveBuddy</title>
-</head>
-
-<body>
-  <header>
-    <div id="logoContainer">
-      <a href="#hero">
-        <img src="../assets/images/drivebuddy-logo.svg" alt="DriveBuddyLogo" id="logo" />
-        <h1 class="visually-hidden">DriveBuddy</h1>
-      </a>
-    </div>
-    <nav>
-      <ul id="menu">
-        <li><a href="#solution">Home </a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="toggleButton">
-        <i class="fa-solid fa-bars" id="toggleButtonIcon"></i>
-        <span class="visually-hidden">Toggle Menu</span>
-      </button>
-    </nav>
-  </header>
-  <main>
-    <section id="hero">
-      <div class="hero-content">
-        <h2 class="hero-title">Drive aware,<br/> get there!</h2>
-        <p class="hero-text">AI-powered app with fatigue detection and real-time alerts to keep you safe on the road.
-        </p>
-
-        <button class="proposal-button">
-          <i class="fa-solid fa-download"></i>Project Proposal
+  <body>
+    <header>
+      <div id="logoContainer">
+        <a href="#hero">
+          <img
+            src="../assets/images/drivebuddy-logo.svg"
+            alt="DriveBuddyLogo"
+            id="logo"
+          />
+          <h1 class="visually-hidden">DriveBuddy</h1>
+        </a>
+      </div>
+      <nav>
+        <ul id="menu">
+          <li><a href="#solution">Home </a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="toggleButton">
+          <i class="fa-solid fa-bars" id="toggleButtonIcon"></i>
+          <span class="visually-hidden">Toggle Menu</span>
         </button>
-      </div>
-    </section>
-    <section id="solution">
-      <div class="grid-item">
-        <div class="image-wrapper">
-          <img src="../assets/images/problems-mockups.png" alt="problems-mockups" class="solution-image">
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <h2 class="hero-title">
+            Drive aware,<br />
+            get there!
+          </h2>
+          <p class="hero-text">
+            AI-powered app with fatigue detection and real-time alerts to keep
+            you safe on the road.
+          </p>
+
+          <a
+            class="proposal-button"
+            href="./assets/DriveBuddy_Proposal.pdf"
+            download
+          >
+            <i class="fa-solid fa-download"></i>Project Proposal
+          </a>
         </div>
-      </div>
-      <div class="grid-item">
-        <div class="solution-wrapper">
-          <img class="warningSign" src="./assets/images/report-problem-filled.svg" aria-hidden="true"/>
-          <h4>Drowsiness leads to 20% of fatal road crashes</h4>
-          <p>Drowsy driving is a leading cause of road accidents. Long-haul drivers often underestimate fatigue until it’s
-            too late.</p>
+      </section>
+      <section id="solution">
+        <div class="grid-item">
+          <div class="image-wrapper">
+            <img
+              src="../assets/images/problems-mockups.png"
+              alt="problems-mockups"
+              class="solution-image"
+            />
+          </div>
         </div>
-        <div class="solution-wrapper">
-          <img class="eyeIcon" src="./assets/images/material-symbols_eye-tracking-rounded.svg" aria-hidden="true"/>
-          <h4>DriveBuddy helps you stay focused and prevent accidents</h4>
-          <p>DriveBuddy uses face detection to early indicate sign of drowsiness and alerts you instantly to avoid putting
-            your safety at risk.</p>
-        </div>
-      </div>
-      
-    </section>
-    <section id="features">
-      <div class="features-row">
-        <div class="features-wrapper card-1">
-          <div class="feature-text">
-            <h5>Face and Eye Monitoring</h5>
-            <p>Uses AI and machine learning to monitor a driver’s face and eyes in real-time to detect signs of drowsiness
-              such as eyes closed for extended periods, or frequent blinking which are natural responses of drowsiness.
+        <div class="grid-item">
+          <div class="solution-wrapper">
+            <img
+              class="warningSign"
+              src="./assets/images/report-problem-filled.svg"
+              aria-hidden="true"
+            />
+            <h4>Drowsiness leads to 20% of fatal road crashes</h4>
+            <p>
+              Drowsy driving is a leading cause of road accidents. Long-haul
+              drivers often underestimate fatigue until it’s too late.
             </p>
           </div>
-          <div class="feature-card-wrapper">
-            <img src="../assets/images/feature_mockups1.png" aria-hidden="true">
-            <img class="feature-extra" src="../assets/images/detection.svg" aria-hidden="true">
+          <div class="solution-wrapper">
+            <img
+              class="eyeIcon"
+              src="./assets/images/material-symbols_eye-tracking-rounded.svg"
+              aria-hidden="true"
+            />
+            <h4>DriveBuddy helps you stay focused and prevent accidents</h4>
+            <p>
+              DriveBuddy uses face detection to early indicate sign of
+              drowsiness and alerts you instantly to avoid putting your safety
+              at risk.
+            </p>
           </div>
         </div>
-        <div class="features-wrapper card-2">
-          <div class="feature-text">
-            <h5>Sound and Voice Alerts</h5>
-            <p>Delivers sound and voice alerts when sleepiness is detected, helping drivers to keep awake without being
-              disruptive.</p>
-          </div>
-          <div class="feature-card-wrapper">
-            <img src="../assets/images/feature_mockups2.png" aria-hidden="true">
-            <img class="feature-extra" src="../assets/images/warning.svg" aria-hidden="true">
-          </div>
-        </div>
-      </div>
-      <div class="features-row">
-        <div class="features-wrapper-vertical card-3">
-          <div class="feature-text">
-            <h5>GPS Navigator</h5>
+      </section>
+      <section id="features">
+        <div class="features-row">
+          <div class="features-wrapper card-1">
             <div class="feature-text">
-              <p>Displays the driver’s current location on the map, and suggests the best route to reach their destination
-                efficiently, ensuring they stay on track and avoid unnecessary detours.</p>
+              <h5>Face and Eye Monitoring</h5>
+              <p>
+                Uses AI and machine learning to monitor a driver’s face and eyes
+                in real-time to detect signs of drowsiness such as eyes closed
+                for extended periods, or frequent blinking which are natural
+                responses of drowsiness.
+              </p>
+            </div>
+            <div class="feature-card-wrapper">
+              <img
+                src="../assets/images/feature_mockups1.png"
+                aria-hidden="true"
+              />
+              <img
+                class="feature-extra"
+                src="../assets/images/detection.svg"
+                aria-hidden="true"
+              />
             </div>
           </div>
-          <div class="feature-card-wrapper">
-            <img src="../assets/images/map_mockups.png" aria-hidden="true">
-            <img class="feature-extra" src="../assets/images/start-driving.svg" aria-hidden="true">
+          <div class="features-wrapper card-2">
+            <div class="feature-text">
+              <h5>Sound and Voice Alerts</h5>
+              <p>
+                Delivers sound and voice alerts when sleepiness is detected,
+                helping drivers to keep awake without being disruptive.
+              </p>
+            </div>
+            <div class="feature-card-wrapper">
+              <img
+                src="../assets/images/feature_mockups2.png"
+                aria-hidden="true"
+              />
+              <img
+                class="feature-extra"
+                src="../assets/images/warning.svg"
+                aria-hidden="true"
+              />
+            </div>
           </div>
         </div>
-        <div class="features-wrapper-vertical card-4">
-          <div class="feature-text">
-            <h5>Nearby Rest Stop Suggestions</h5>
-            <p>Suggests nearby rest stops such as gas stations, rest areas, and other places where drivers can take a
-              break,
-              grab a coffee, and recharge.</p>
+        <div class="features-row">
+          <div class="features-wrapper-vertical card-3">
+            <div class="feature-text">
+              <h5>GPS Navigator</h5>
+              <div class="feature-text">
+                <p>
+                  Displays the driver’s current location on the map, and
+                  suggests the best route to reach their destination
+                  efficiently, ensuring they stay on track and avoid unnecessary
+                  detours.
+                </p>
+              </div>
+            </div>
+            <div class="feature-card-wrapper">
+              <img src="../assets/images/map_mockups.png" aria-hidden="true" />
+              <img
+                class="feature-extra"
+                src="../assets/images/start-driving.svg"
+                aria-hidden="true"
+              />
+            </div>
           </div>
-          <div class="feature-card-wrapper">
-            <img src="../assets/images/map_mockups2.png" alt="">
+          <div class="features-wrapper-vertical card-4">
+            <div class="feature-text">
+              <h5>Nearby Rest Stop Suggestions</h5>
+              <p>
+                Suggests nearby rest stops such as gas stations, rest areas, and
+                other places where drivers can take a break, grab a coffee, and
+                recharge.
+              </p>
+            </div>
+            <div class="feature-card-wrapper">
+              <img src="../assets/images/map_mockups2.png" alt="" />
+            </div>
+          </div>
+          <div class="features-wrapper-vertical card-5">
+            <div class="feature-text">
+              <h5>Tracking Driving Analytics</h5>
+              <p>
+                Get summary of your driving history together with the alert
+                received to manage and adjust your driving schedule.
+              </p>
+            </div>
+            <div class="feature-card-wrapper">
+              <img
+                src="../assets/images/history_mockups.png"
+                aria-hidden="true"
+              />
+              <img
+                class="feature-extra"
+                src="../assets/images/tooltip-chart.svg"
+                aria-hidden="true"
+              />
+            </div>
           </div>
         </div>
-        <div class="features-wrapper-vertical card-5">
-          <div class="feature-text">
-            <h5>Tracking Driving Analytics</h5>
-            <p>Get summary of your driving history together with the alert received to manage and adjust your driving
-              schedule.</p>
-          </div>
-          <div class="feature-card-wrapper">
-            <img src="../assets/images/history_mockups.png" aria-hidden="true">
-            <img class="feature-extra" src="../assets/images/tooltip-chart.svg" aria-hidden="true">
-          </div>
-        </div>
-        
-      </div>
-      <div class="features-row">
+        <div class="features-row">
           <div class="card-6">
             <div class="feature-card-wrapper">
-              <img src="../assets/images/administration.png" alt="">
+              <img src="../assets/images/administration.png" alt="" />
             </div>
             <div class="feature-text feature-admin">
               <h5>Administration Dashboard</h5>
-              <p>Allows companies to monitor their drivers’ safety and well-being, providing insights such as drowsiness
-                alerts to help identify potential safety risks before they escalate.</p>
+              <p>
+                Allows companies to monitor their drivers’ safety and
+                well-being, providing insights such as drowsiness alerts to help
+                identify potential safety risks before they escalate.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="team">
+        <h2>Team Behind DriveBuddy</h2>
+        <div id="teamGrid"></div>
+      </section>
+      <section id="contact">
+        <div class="form-wrapper">
+          <h3>
+            Interested in helping us to take this project to the next level?
+            Let's connect!
+          </h3>
+          <form class="contact-form" id="contactForm">
+            <div class="name-wrapper">
+              <label for="name" required>Name *</label>
+              <input required type="text" id="name" />
+            </div>
+            <div class="email-wrapper">
+              <label for="email" required>Email *</label>
+              <input required type="text" id="email" />
+            </div>
+            <div class="message-wrapper">
+              <label for="message" required>Message *</label>
+              <textarea required id="message" rows="10"></textarea>
+            </div>
+            <div class="button-wrapper">
+              <button type="submit" id="Send" class="submit-button">
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="logoContainer" class="footer-logo">
+        <a href="#hero">
+          <img
+            src="../assets/images/drivebuddy-logo.svg"
+            alt="DriveBuddyLogo"
+            id="logo"
+          />
+          <h1 class="visually-hidden">DriveBuddy</h1>
+        </a>
       </div>
-    </section>
-    <section id="team">
-      <h2>Team Behind DriveBuddy</h2>
-      <div id="teamGrid"></div>
-    </section>
-    <section id="contact">
-      <div class="form-wrapper">
-        <h3>Interested in helping us to take this project to the next level? Let's connect!</h3>
-        <form class="contact-form">
-          <div class="name-wrapper">
-            <label for="name" required>Name *</label>
-            <input type="text">
-          </div>
-          <div class="email-wrapper">
-            <label for="email" required>Email *</label>
-            <input type="text">
-          </div>
-          <div class="message-wrapper">
-            <label for="Message" required>Message *</label>
-            <input type="text">
-          </div>
-          <div class="button-wrapper">
-            <button type="submit" id="Send" class="submit-button">Send</button>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div id="logoContainer" class="footer-logo">
-      <a href="#hero">
-        <img src="../assets/images/drivebuddy-logo.svg" alt="DriveBuddyLogo" id="logo" />
-        <h1 class="visually-hidden">DriveBuddy</h1>
-      </a>
-    </div>
-    <small>All rights reserved. DriveBuddy &copy; <span id="currentYear"></span>
-  </footer></small>
-</body>
+      <small
+        >All rights reserved. DriveBuddy &copy; <span id="currentYear"></span
+      ></small>
+    </footer>
+    <!-- Backdrop -->
+    <div class="modal-backdrop" id="backdrop"></div>
 
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Success</h2>
+        <button class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img
+          src="./assets/images/emailSentIcon.svg"
+          alt="Confirmation"
+          id="modal-img"
+        />
+        <p id="modal-message">Your message has been sent successfully!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="close-btn">Close</button>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script type="text/javascript"></script>
 </html>
