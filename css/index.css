@@ -14,6 +14,7 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
   color: #353e45;
+  image-rendering: crisp-edges;
 }
 
 h2 {
@@ -145,13 +146,13 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
-  height: 95vh;
+  height: 100vh;
   align-items: normal;
 }
 
 .hero-title {
   color: var(--Neutral-4, #333);
-  font-size: 3rem;
+  font-size: 4rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1.2;
@@ -226,7 +227,18 @@ section {
   height: 100%;
   max-height: 750px;
   position: relative;
+  margin: auto;
 }
+/*Awards*/
+#awardsGrid {
+  gap: 1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 3rem 0;
+}
+
 /*Team*/
 .imageWrapper {
   width: 100%;
@@ -360,7 +372,9 @@ section {
   position: relative;
   align-content: end;
 }
-
+#video {
+  padding: 0;
+}
 #team > h2 {
   margin: calc(2rem + 58px) auto 2rem auto;
   text-align: center;
@@ -425,20 +439,28 @@ footer {
 /*Contact*/
 
 #contact {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 23px;
   background-color: rgba(30, 58, 138, 0.1);
 }
 
 .contact-form {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
 }
-.form-wrapper {
+.form-wrapper,
+.repo-wrapper {
+  align-self: stretch;
+  min-width: 400px;
   max-width: 600px;
-  margin: auto;
+  flex: 1;
+  margin: 0 auto;
   padding-top: 2rem;
 }
 .contact-form :is(input, textarea) {
@@ -475,6 +497,24 @@ footer {
 }
 button:hover {
   cursor: pointer;
+}
+.repo-wrapper ul {
+  display: grid;
+  padding: 0;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.repo-wrapper ul li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  list-style: none;
+}
+.repo-wrapper ul li i {
+  font-size: 2rem;
+}
+.repo-wrapper ul li a {
+  font-size: 1.2rem;
 }
 /*Media Queries*/
 @media screen and (max-width: 400px) {
@@ -537,6 +577,7 @@ button:hover {
   }
 
   header nav #menu.show {
+    display: flex;
     top: 0;
     padding-top: calc(54px + 1rem);
     z-index: 50;
@@ -594,6 +635,17 @@ button:hover {
     right: 35%;
     scale: 150%;
   }
+  #awardsGrid {
+    gap: 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  #awardsGrid img {
+    max-width: 550px;
+  }
 }
 
 @media only screen and (min-width: 430px) {
@@ -613,6 +665,10 @@ button:hover {
     grid-template-columns: 1fr 2fr;
     gap: 0;
     max-height: 650px;
+    padding: 2rem 5rem;
+  }
+  .solution-image {
+    margin: unset;
   }
   #solution .image-wrapper {
     margin-left: 5vw;
@@ -630,7 +686,7 @@ button:hover {
     right: -60px;
   }
   #solution .grid-item:nth-of-type(2) .solution-wrapper {
-    max-width: 550px;
+    max-width: 450px;
   }
   #solution .grid-item:nth-of-type(1) {
     grid-row: 1;
@@ -648,7 +704,7 @@ button:hover {
   }
   #solution .grid-item:nth-of-type(2) .solution-wrapper:nth-of-type(2) {
     position: relative;
-    left: -20%;
+    left: -50%;
   }
   #solution .grid-item:nth-of-type(2) .solution-wrapper:nth-of-type(1) {
     position: relative;
@@ -658,7 +714,7 @@ button:hover {
     grid-template-columns: repeat(3, 1fr);
   }
   #features {
-    padding-top: 20vh;
+    padding-top: 10vh;
   }
   #features .features-row {
     gap: 1.5rem;
