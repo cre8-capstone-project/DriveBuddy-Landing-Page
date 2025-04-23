@@ -457,7 +457,6 @@ footer {
 .form-wrapper,
 .repo-wrapper {
   align-self: stretch;
-  min-width: 400px;
   max-width: 600px;
   flex: 1;
   margin: 0 auto;
